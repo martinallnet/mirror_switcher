@@ -5,9 +5,9 @@ sources_local="/etc/apt/sources.list.local"
 sources_network="/etc/apt/sources.list.network"
 sources_global="/etc/apt/sources.list.global"
 
-mirrors="/etc/apt/sources.list"
-mirrors_network="/etc/apt/sources.list.network"
-mirrors_global="/etc/apt/sources.list.global"
+mirror="/etc/apt/mirror.list"
+mirror_network="/etc/apt/mirror.list.network"
+mirror_global="/etc/apt/mirror.list.global"
 
 if [ "$1" = "local" ]; then
 
@@ -38,19 +38,19 @@ elif [ "$1" = "global" ]; then
 
 elif [ "$1" = "m-network" ]; then
 
- if [ -f $mirrors_network ]; then
-  cp $mirrors_network $mirrors
+ if [ -f $mirror_network ]; then
+  cp $mirror_network $mirror
   echo "OK"
- elif [ ! -f $mirrors_network ];then
+ elif [ ! -f $mirror_network ];then
   echo "Error: No network apt-mirror source file avaiable!"
  fi
 
 elif [ "$1" = "m-global" ]; then
 
- if [ -f $mirrors_global ]; then
-  cp $mirrors_global $mirrors
+ if [ -f $mirror_global ]; then
+  cp $mirror_global $mirror
   echo "OK"
- elif [ ! -f $mirrors_global ];then
+ elif [ ! -f $mirror_global ];then
   echo "Error: No global apt-mirror mirror source file avaiable!"
  fi
 
