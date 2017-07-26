@@ -14,7 +14,7 @@ if [ "$1" = "local" ]; then
  if [ -f $sources_local ]; then
   cp $sources_local $sources
   echo "OK"
- elif [ ! -f $sources_local ];then
+ elif [ ! -f $sources_local ]; then
   echo "Error: No local mirror source file avaiable!"
  fi
 
@@ -23,7 +23,7 @@ elif [ "$1" = "network" ]; then
  if [ -f $sources_network ]; then
   cp $sources_network $sources
   echo "OK"
- elif [ ! -f $sources_network ];then
+ elif [ ! -f $sources_network ]; then
   echo "Error: No network mirror source file avaiable!"
  fi
 
@@ -32,7 +32,7 @@ elif [ "$1" = "global" ]; then
  if [ -f $sources_global ]; then
   cp $sources_global $sources
   echo "OK"
- elif [ ! -f $sources_global ];then
+ elif [ ! -f $sources_global ]; then
   echo "Error: No global mirror source file avaiable!"
  fi
 
@@ -41,7 +41,7 @@ elif [ "$1" = "m-network" ]; then
  if [ -f $mirror_network ]; then
   cp $mirror_network $mirror
   echo "OK"
- elif [ ! -f $mirror_network ];then
+ elif [ ! -f $mirror_network ]; then
   echo "Error: No network apt-mirror source file avaiable!"
  fi
 
@@ -50,7 +50,7 @@ elif [ "$1" = "m-global" ]; then
  if [ -f $mirror_global ]; then
   cp $mirror_global $mirror
   echo "OK"
- elif [ ! -f $mirror_global ];then
+ elif [ ! -f $mirror_global ]; then
   echo "Error: No global apt-mirror mirror source file avaiable!"
  fi
 
