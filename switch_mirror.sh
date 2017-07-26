@@ -58,7 +58,7 @@ else
  echo "$0 local       local mirror source"
  echo "$0 network     network mirror source"
  echo "$0 global      global mirror source"
- echo.
+ echo
  echo "$0 m-network   network apt-mirror source"
  echo "$0 m-global    global apt-mirror source"
 
